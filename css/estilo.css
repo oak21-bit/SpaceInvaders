@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    /* remove as margens do corpo do documento html */
+
+    padding: 0;
+    /* remove o preenchimento padrão do documento */
+
+    display: flex;
+    /* permite um alinhamento avançado de elementos filhos */
+
+    justify-content: center;
+    /* centraliza os elementos filhos horizontalmente */
+
+    align-items: center;
+    /* permite um alinhamento avançado de elementos filhos */
+
+    height: 100vh;
+    /* define a altura do corpo para ser igual a 100% da janelado navegador */
+
+    background-color: #000; /* cor de fundo da página */
+
+    font-family: Arial, Helvetica, sans-serif; /* definindo fontes sem serifa */
+}
+
+#container{
+    text-align: center;
+    /* alinhando texto, cabeçalhoos e botões horizontalmente */
+
+    position: relative;
+    /* coloca elementos em um "estado posicionado", mas sem tirá-lo do fluxo normal da página. */
+
+    /* 
+        Mesmo que o código atual não tenha nenhum elemento com position: absolute
+        dentro do container, é muioto comum em jogos HTML usar isso para:display:
+        posicionar (pontuação, vidas, mensagens),
+        criar camadassobre o canvas,
+        posicionar o modal ou botões dentro do container.
+    */
+}
+
+#tituloJogo{
+    font-size: 36px; /* define tamanho do titulo para 36px */
+    color: #fff; /* define cor do titulo para cor branca */
+    margin-bottom: 20px;
+    /* adiciona uma margem abaixo do titulo para separa-lo dos elementos que estão abaixo */
+}
+
+#pontuação{
+    font-size: 24px; /* define tamanho da fonte para 24px */
+    color: #fff; /* define cor do testo para cor branca */
+    margin-bottom: 10px;
+    /* adiciona uma margem abaixo do titulo para separa-lo dos elementos que estão abaixo */
+}
+
+#vidas{
+    font-size: 24px; /* define tamanho da fonte para 24px */
+    color: #fff; /* define cor do testo para branca */
+}
+
+canvas{
+    border: 2px solid #fff;
+    /* inserindo borda de 2 pixels na cor branca para destacar area de jogo */
+}
+
+.modal{
+    display: none;
+    /* O modal começa invisivel */
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    background-color: rgb(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    background-color: #fff;
+    margin: auto;
+    padding: 20%;
+    border: 1px solid #888;
+    text-align: center;
+}
+
+.botao{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 160px;
+}
