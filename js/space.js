@@ -22,4 +22,38 @@ class obj {
 
         telaJogo.fillRect(this.posx, this.posy, this.largura, this.altura)
     }
+
+    atualizar(){
+
+        this.posx += this.velocidade
+
+        this.posx += Math.max(0, Math.min(this.posx, telaJogo.width - this - this.largura))
+    }
+
+    mover(direcao){
+
+        const velocidade = 5;
+
+        this.velocidade = direcao === 'esquerda'? - velocidade:velocidade
+    }
+
+    parar(){
+
+        this.velocidade = 0
+    }
+
+    perderVida(){
+
+        this.vidas--
+
+        document.getElementById('vidas').innerText = 'Vidas: &(this.vidas'
+
+        if(this.vidas === 0){
+
+            localStorage.setItem('vidas',3)
+
+            exibirModal('Você perdeu! Game Over!', false)
+        }
+    }
+
 }
